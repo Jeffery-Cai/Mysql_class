@@ -198,6 +198,13 @@
       }
     }
 
+/*
+  success('text',$url);  // 调用公共函数
+  error('text',$url);  // 调用公共函数
+   @function -> url:
+        Url地址  ：  https://github.com/Jeffery-Cai/MyFunctions/blob/master/functions.php
+        Download ZIP地址  ：  https://github.com/Jeffery-Cai/MyFunctions
+*/
 // Jeffery改动
     public function delMore($delname,$tableName,$url)
     {
@@ -206,7 +213,7 @@
      mysql_query($this->sql);
      if(mysql_affected_rows()>0)
      {
-      success("删除成功",$url);
+      success("删除成功",$url);  
     }else{
       error("删除失败");
     }
