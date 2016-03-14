@@ -21,28 +21,28 @@
 	查询记录
 
 	// 查询所有记录
-	$db->get('tablename');
+	$db->get('tablename')->result_array();
 
 	// 限定字段
-	$db->select('id,name')->get('tablename');
+	$db->select('id,name')->get('tablename')->result_array();
 
 	// 限定条件
-	$db->where('id=1')->get('tablename');
+	$db->where('id=1')->get('tablename')->result_array();
 
 	// 组合条件
-	$db->where("name='allen' AND age=18")->get('tablename');
+	$db->where("name='allen' AND age=18")->get('tablename')->result_array();
 
 	// 单排序
-	$db->orderby('id desc')->get('tablename');
+	$db->orderby('id desc')->get('tablename')->result_array();
 
 	// 双排序
-	$db->orderby('id desc,addtime desc')->get('tablename');
+	$db->orderby('id desc,addtime desc')->get('tablename')->result_array();
 
 	// 限定记录数
-	$db->limit(10)->get('tablename');
+	$db->limit(10)->get('tablename')->result_array();
 
 	// 限定记录偏移量和记录数
-	$db->limit('0,10')->get('tablename');
+	$db->limit('0,10')->get('tablename')->result_array();
 	生成查询结果
 
 	// 生成单条记录
